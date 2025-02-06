@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi"; // Menu & Close Icons
 import GradientButton from "../gradientButton/GradientButton";
 import { navLinks } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = (title)=>{
+   navigate(`/${title}`)
+  }
 
   return (
     <nav className="w-full h-auto bg-[#111111] flex justify-between items-center px-6 md:px-16 py-4 relative">
@@ -18,7 +25,8 @@ const Navbar = () => {
         {navLinks.map((item) => (
           <li
             key={item.id}
-            className="text-white hover:text-[#0da34e] transition-all"
+            onClick={()=>handleClick(item.route)}
+            className="text-white hover:text-[#0da34e] transition-all cursor-pointer"
           >
             {item.id === 3 ? <GradientButton text={item.title} /> : item.title}{" "}
           </li>
@@ -46,8 +54,19 @@ const Navbar = () => {
           menuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden`}
       >
-       {navLinks.map((item) => {
-          return <li className=" text-white text-xl" onClick={()=>setMenuOpen(false)}>{item.id===3?<GradientButton text={item.title}/>:item.title}</li>;
+        {navLinks.map((item) => {
+          return (
+            <li
+              className=" text-white text-xl"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.id === 3 ? (
+                <GradientButton text={item.title} />
+              ) : (
+                item.title
+              )}
+            </li>
+          );
         })}
       </div>
     </nav>
