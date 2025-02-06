@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@font-face {
+    font-family: 'outfit';
+    src: url('./assets/fonts/static/Outfit-Regular.woff2');
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'outfit', sans-serif;
+    list-style: none;
+}
+
+
+
