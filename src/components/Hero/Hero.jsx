@@ -3,9 +3,9 @@ import React from 'react'
 const Hero = () => {
   return (
     <section className="  w-full h-screen lg:h-auto bg-[#111111] text-white  ">
-      <div className=" w-full flex flex-col  items-center justify-center gap-4 text-center pt-17 px-2 lg:px-0 ">
+      <div className=" w-full flex flex-col  items-center justify-center gap-4 text-center pt-17 px-2 lg:px-0  ">
         {/* first heading  */}
-        <h5 className="text-[12px] md:text-sm lg:text-sm  uppercase">
+        <h5 className="text-[12px] md:text-sm lg:text-sm  uppercase ">
           AI + Design + DEVELOPMENT: Creating the Future, Today.
         </h5>
 
