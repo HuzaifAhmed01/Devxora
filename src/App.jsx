@@ -1,14 +1,12 @@
 import React from 'react'
 
-import Navbar from './components/Navbar/Navbar'
-import Home from './pages/home/Home'
-
+import Router from '../router'
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Home/>
-
+   
+    {/* <Home/> */}
+    <Router/>
 
     </>
   )
