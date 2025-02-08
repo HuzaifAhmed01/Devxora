@@ -1,7 +1,9 @@
 import React from 'react'
 import Hero from '../../components/Hero/Hero'
-import SeconderyHome from '../../components/seconderyHome/SeconderyHome'
-import BentoGrid from '../../components/bentoGrid/Bentogrid'
+import SeconderyHome from '../../components/showreelSection/ShowreelSection'
+import EnhancedWebComp from '../../components/EnhacedWebComp/EnhancedWebComp'
+import FeaturedProjects from '../../components/freaturedProjects/FeaturedProjects'
+
 
 
 const Home = () => {
@@ -9,6 +11,10 @@ const Home = () => {
     <>
     
     <Hero/>
+    <SeconderyHome/>
+    <EnhancedWebComp/>
+    <FeaturedProjects/>
+    
     
 
       

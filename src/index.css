@@ -14,10 +14,10 @@
 
 body{
     background-color: #111;
+
 }
 
-body{
-    background-color: #111;
+*::selection {
+    background: #2f2f2f; /* Dark background */
+    color: #ffffff; /* White text */
 }
-
-
