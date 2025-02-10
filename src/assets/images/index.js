@@ -3,6 +3,11 @@ import tekisky from "./projects/Tekisky.png";
 import asmak from "./projects/asmak.png";
 import gearxpert from "./projects/gearXpert.png";
 import gogroove from "./projects/GoGroove.png";
-import greenBubbleVideo from './../videos/video1.webm'
+import projectVideo from './../videos/video1.webm';
+import PhilosophyVideo from "./../videos/philosophy.webm";
+import InquiryBg from './../images/3dbg-.webp'
+import MarqueeVid from './../videos/MarqueeVideo.webm';
+import HomeReel from './../videos/HomeReel_.webm'
 
-export { tekiskyMart, asmak, gearxpert, gogroove, tekisky ,greenBubbleVideo };
+
+export { tekiskyMart, asmak, gearxpert, gogroove, tekisky ,projectVideo,PhilosophyVideo,InquiryBg,MarqueeVid,HomeReel };

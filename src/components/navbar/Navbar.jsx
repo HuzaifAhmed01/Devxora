@@ -28,7 +28,7 @@ const Navbar = () => {
             onClick={()=>handleClick(item.route)}
             className="text-white hover:text-[#0da34e] transition-all cursor-pointer"
           >
-            {item.id === 3 ? <GradientButton text={item.title} /> : item.title}{" "}
+            {item.id === 3 ? <GradientButton text={item.title} clasess="lg:text-[13px] bg-[#0DA34E] text-white  " /> : item.title}{" "}
           </li>
         ))}
       </ul>
@@ -59,6 +59,7 @@ const Navbar = () => {
             <li
               className=" text-white text-xl"
               onClick={() => setMenuOpen(false)}
+              key={item.id}
             >
               {item.id === 3 ? (
                 <GradientButton text={item.title} />
