@@ -20,3 +20,10 @@ export const navLinks = [
     route: "let's-talk",
   },
 ];
+
+export const Benefit = [
+  {
+    
+  },
+];
+
