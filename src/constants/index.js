@@ -4,8 +4,13 @@ import {
   gogroove,
   tekisky,
   tekiskyMart,
+  
 } from "../assets/images";
-
+import svg1 from '../assets/images/company/svg1.svg'
+import { GiNestedHexagons } from "react-icons/gi";
+import { AiOutlineSlack } from "react-icons/ai";
+import { ImInfinite } from "react-icons/im";
+import { IoLogoTableau } from "react-icons/io5";
 export const navLinks = [
   {
     id: 0,
@@ -117,4 +122,32 @@ export let FooterActions = [
   { id: 1, name: "Twitter", action: "#" },
   { id: 2, name: "Instagram", action: "#" },
   { id: 3, name: "LinkedIn", action: "#" },
+];
+
+
+export let Benefits = [
+  {
+    svg: GiNestedHexagons,
+    h3: " Time zones ain’t no thing",
+    paragraph:
+      "Wherever you are, it’ll feel like we’re right next door. With years of expertise, we deliver seamless solutions that transcend time zones and boundaries.",
+  },
+  {
+    svg: AiOutlineSlack,
+    h3: " Impossible? We’re on it",
+    paragraph:
+      "At our agency, 'impossible' isn’t an option. We bring your vision to life exactly as imagined—no shortcuts, no compromises, just pure innovation.",
+  },
+  {
+    svg: ImInfinite,
+    h3: " Flexible work terms",
+    paragraph:
+      "We operate within a flexible Time and Materials framework, ensuring every project stays on track and aligned with your specific goals and budget.",
+  },
+  {
+    svg: IoLogoTableau,
+    h3: "Full spectrum of services",
+    paragraph:
+      "From logo creation and UI/UX design to full-scale development, technical support, and marketing—we deliver end-to-end solutions tailored to your business needs.",
+  },
 ];
