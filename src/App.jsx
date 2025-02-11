@@ -1,13 +1,15 @@
 import React from 'react'
 
-import Router from '../router'
+import Router from '../Router'
+import SmoothScroll from './utils/SmoothScroll'
 const App = () => {
   return (
     <>
    
     {/* <Home/> */}
-    <Router/>
-
+<SmoothScroll>
+<Router/>
+</SmoothScroll>
     </>
   )
 }
