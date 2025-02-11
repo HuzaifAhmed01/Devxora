@@ -1,28 +1,40 @@
-import React, { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+import React, { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SmoothScroll = ({ children }) => {
-  const containerRef = useRef(null);
-
   useEffect(() => {
-    const locoScroll = new LocomotiveScroll({
-      el: containerRef.current,
+    const lenis = new Lenis({
       smooth: true,
-      lerp: 0.08,
-      multiplier: 1.2,
+    });
+
+    const update = (time) => {
+      lenis.raf(time);
+      ScrollTrigger.update(); // 👈 Sync GSAP ScrollTrigger with Lenis
+      requestAnimationFrame(update);
+    };
+
+    requestAnimationFrame(update);
+
+    // Tell GSAP to use Lenis' scroll position
+    ScrollTrigger.scrollerProxy(document.body, {
+      scrollTop(value) {
+        return value !== undefined ? lenis.scrollTo(value, { immediate: true }) : window.scrollY;
+      },
+      getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+      },
     });
 
     return () => {
-      locoScroll.destroy();
+      lenis.destroy();
     };
   }, []);
 
-  return (
-    <div ref={containerRef} data-scroll-container>
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default SmoothScroll;

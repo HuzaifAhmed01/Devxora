@@ -1,40 +1,76 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { projects } from "../../constants";
 
-const   MasonryGrid = () => {
+const MasonryGrid = () => {
   return (
-    <section className="w-full flex flex-wrap items-center justify-center lg:justify-center  lg:flex-row gap-6 ">
-      <div className="flex flex-col  gap-6">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }} // Animates once when 20% is in view
+      className="w-full flex flex-wrap items-center justify-center lg:justify-center lg:flex-row gap-6"
+    >
+      {/* First Column */}
+      <div className="flex flex-col gap-6">
         {projects
           .filter((item) => item.id < 3)
           .map((item) => (
-            <div key={item.id} className="w-[300px] sm:w-[360px]">
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+              className="w-[300px] sm:w-[360px]"
+            >
               <div className="w-full h-[400px] rounded-3xl overflow-hidden mb-4">
-                <img className="w-full h-full object-fill" src={item.image} alt={item.name} />
+                <motion.img
+                  initial={{ scale: 1.2 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="w-full h-full object-fill"
+                  src={item.image}
+                  alt={item.name}
+                />
               </div>
               <h3 className="text-lg font-semibold">{item.name}</h3>
               <h4 className="text-sm opacity-50">{item.country}</h4>
-            </div>
+            </motion.div>
           ))}
       </div>
 
       {/* Second Column */}
-      <div className="flex flex-col gap-6 ">
+      <div className="flex flex-col gap-6">
         {projects
-          .filter((item) => item.id >=3 && item.id <= 4)
+          .filter((item) => item.id >= 3 && item.id <= 4)
           .map((item) => (
-            <div key={item.id} className="w-[300px] sm:w-[360px]">
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+              className="w-[300px] sm:w-[360px]"
+            >
               <div className="w-full h-[400px] rounded-3xl overflow-hidden mb-4">
-                <img className="w-full h-full object-fill" src={item.image} alt={item.name} />
+                <motion.img
+                  initial={{ scale: 1.2 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="w-full h-full object-fill"
+                  src={item.image}
+                  alt={item.name}
+                />
               </div>
               <h3 className="text-lg font-semibold">{item.name}</h3>
               <h4 className="text-sm opacity-50">{item.country}</h4>
-            </div>
+            </motion.div>
           ))}
       </div>
-
-
-    </section>
+    </motion.section>
   );
 };
 

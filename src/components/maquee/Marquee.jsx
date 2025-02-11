@@ -17,10 +17,10 @@ const Marquee = ({ text, speed = 10 }) => {
   }, [speed]);
 
   return (
-    <div className=" relative w-full h-70 overflow-hidden py-10 bg-black">
+    <div className=" relative w-full h-70 overflow-hidden py-10 bg-[#111 mt-30">
       {/* Fading Edges */}
-      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#111] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[#111] to-transparent z-10 pointer-events-none"></div>
 
       {/* Marquee Container */}
       <div className="flex whitespace-nowrap w-max" ref={marqueeRef}>
