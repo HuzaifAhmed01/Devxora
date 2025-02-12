@@ -6,7 +6,6 @@ const Projects = () => {
   return (
     <div>
       <FeaturedProjects />
-      <Marquee text={'Flawless Dev, Smooth UX '} speed={15}/>
 
     </div>
   );

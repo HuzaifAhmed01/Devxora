@@ -42,7 +42,6 @@ const handleClick = (title) => {
            
             
             className="text-white hover:text-[#0da34e] transition-all cursor-pointer"
-            whileHover={{ scale: 1.1 }}
           >
             {item.id === 3 ? (
               <GradientButton
@@ -83,7 +82,10 @@ const handleClick = (title) => {
               <motion.li
                 className="text-white text-xl cursor-pointer"
                 key={item.id}
-                onClick={() => handleClick(item.route)}
+                onClick={() => {handleClick(item.route)
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+
+                }}
                 whileHover={{ scale: 1.1, color: "#0da34e" }}
               >
                 {item.id === 3 ? (
