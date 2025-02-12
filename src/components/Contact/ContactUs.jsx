@@ -1,8 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import GradientButton from "../gradientButton/GradientButton";
+import emailjs from "@emailjs/browser"; 
 
 const ContactUs = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+
+      
+      // Your EmailJS credentials
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      emailjs.send(serviceID, templateID, formData, publicKey).then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          alert("Your message has been sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          }); // Reset form
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          alert("There was an error sending your message. Please try again.");
+        }
+      );
+    };
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-10 lg:px-16 py-12">
       {/* Background Image */}
@@ -41,7 +89,7 @@ const ContactUs = () => {
           </p>
 
           {/* Form */}
-          <form className="mt-8 flex flex-col gap-5">
+          <form className="mt-8 flex flex-col gap-5" onSubmit={handleSubmit}>
             <motion.div
               className="relative"
               whileHover={{ scale: 1.02 }}
@@ -50,6 +98,7 @@ const ContactUs = () => {
               <input
                 type="text"
                 placeholder="Your Name"
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-transparent border-b border-gray-700 text-white text-base md:text-lg focus:outline-none focus:border-green-500 transition-all"
               />
             </motion.div>
@@ -62,6 +111,7 @@ const ContactUs = () => {
               <input
                 type="email"
                 placeholder="Your Email"
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-transparent border-b border-gray-700 text-white text-base md:text-lg focus:outline-none focus:border-green-500 transition-all"
               />
             </motion.div>
@@ -74,13 +124,18 @@ const ContactUs = () => {
               <textarea
                 rows="4"
                 placeholder="Your Message"
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-transparent border-b border-gray-700 text-white text-base md:text-lg focus:outline-none focus:border-green-500 transition-all"
               ></textarea>
             </motion.div>
 
             {/* Submit Button */}
             <div className="flex justify-center">
-              <GradientButton text="Let's Connect" clasess="text-white text-[15px] border-1 px-10" />
+              <GradientButton
+              type="submit"
+                text="Let's Connect"
+                clasess="text-white text-[15px] border-1 px-10"
+              />
             </div>
           </form>
         </motion.div>
