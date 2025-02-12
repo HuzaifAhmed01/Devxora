@@ -10,9 +10,9 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-const handleClick = (title) => {
+  const handleClick = (title) => {
     navigate(`/${title}`);
-    setMenuOpen(false); // Close menu on navigation
+    setMenuOpen(false);
   };
 
   return (
@@ -28,7 +28,15 @@ const handleClick = (title) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <img src="logo.png" className="w-32 object-cover" alt="Logo" />
+        <img
+          src="logo.png"
+          className="w-32 object-cover cursor-pointer"
+          alt="Logo"
+          onClick={() => {
+            handleClick("");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        />
       </motion.div>
 
       {/* Desktop Navigation */}
@@ -36,11 +44,10 @@ const handleClick = (title) => {
         {navLinks.map((item) => (
           <motion.li
             key={item.id}
-            onClick={() => {handleClick(item.route);
-              window.scrollTo({ top: 0, behavior: "smooth" })}
-            }
-           
-            
+            onClick={() => {
+              handleClick(item.route);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="text-white hover:text-[#0da34e] transition-all cursor-pointer"
           >
             {item.id === 3 ? (
@@ -82,9 +89,9 @@ const handleClick = (title) => {
               <motion.li
                 className="text-white text-xl cursor-pointer"
                 key={item.id}
-                onClick={() => {handleClick(item.route)
-                  window.scrollTo({ top: 0, behavior: "smooth" })
-
+                onClick={() => {
+                  handleClick(item.route);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 whileHover={{ scale: 1.1, color: "#0da34e" }}
               >

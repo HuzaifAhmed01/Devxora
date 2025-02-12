@@ -14,8 +14,8 @@ const ContactUs = () => {
       <div className="relative w-full flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto gap-10">
         {/* Left Side - Heading */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-white text-center lg:text-left lg:w-1/2"
         >
@@ -28,8 +28,8 @@ const ContactUs = () => {
 
         {/* Right Side - Contact Form */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="relative bg-[#0d0d0d] px-6 sm:px-10 py-8 sm:py-12 w-full max-w-lg border border-gray-800 rounded-2xl shadow-[0px_5px_30px_rgba(0,255,128,0.2)]"
         >

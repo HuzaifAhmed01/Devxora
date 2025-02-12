@@ -29,7 +29,7 @@ const Marquee = ({ text, speed = 10 }) => {
             <p className="text-white text-9xl font-extrabold uppercase tracking-wide">
               {text}
             </p>
-            <div className="w-[15vw] h-[8vw]  rounded-[46px] overflow-hidden shadow-amber-200 bg-red-100 mx-10 ">
+            <div className="w-[30vw] h-[18vw]  lg:w-[15vw] lg:h-[8vw]   rounded-[46px] overflow-hidden shadow-amber-200 bg-red-100 mx-10 ">
                 
             <video
               src={MarqueeVid}

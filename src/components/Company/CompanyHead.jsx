@@ -37,7 +37,7 @@ const CompanyHead = () => {
             <motion.img
               src={company1}
               alt="Company Screenshot"
-              className="w-full h-[90vh] object-cover rounded-3xl transition-transform duration-700"
+              className="w-full lg:h-screen object-cover rounded-3xl transition-transform duration-700"
             />
 
             {/* Overlay Effect */}

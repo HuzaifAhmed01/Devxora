@@ -120,7 +120,7 @@ export let services = [
 export let FooterActions = [
   { id: 0, name: "Facebook", action: "#" },
   { id: 1, name: "Twitter", action: "#" },
-  { id: 2, name: "Instagram", action: "#" },
+  { id: 2, name: "Instagram", action: "https://www.instagram.com/dev_xora/" },
   { id: 3, name: "LinkedIn", action: "#" },
 ];
 

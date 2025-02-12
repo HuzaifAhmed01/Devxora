@@ -51,10 +51,21 @@ const Footer = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h3 className="text-5xl font-bold uppercase">Have an Idea?</h3>
+        <span
+        onClick={()=>{
+          
+          window.scrollTo({ top: 0, behavior: "smooth" })
+          handleClick("let's-talk")
+        }
+
+      }
+        >
+
         <GradientButton
           text={"tell us"}
           clasess={"px-8 py-3 text-[30px] border-1"}
         />
+        </span>
       </motion.div>
 
       {/* Main Footer Heading (Big "DevXora" Text) */}
@@ -72,15 +83,13 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <motion.div
-        className="w-full flex flex-col md:flex-row justify-between items-center mt-16 text-gray-400 text-lg px-4"
+        className="w-full flex flex-col gap-5  md:flex-row justify-between items-center mt-16 text-gray-400 text-lg px-4"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* <GradientButton text={`© ${new Date().getFullYear()} DevXora. All Rights Reserved.`} clasess={"text-[15px] border-1"} />
-        <GradientButton  text={`PrivacyPolicy`} clasess={"text-[15px] border-1"}  />
-        <GradientButton text={`contact@devxora.com`} clasess={"text-[15px] border-1"} /> */}
+ 
 
         {footerLinks.map((item, index) => (
           <span
