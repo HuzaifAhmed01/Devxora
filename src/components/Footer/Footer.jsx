@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FooterActions } from "../../constants";
 import GradientButton from "../gradientButton/GradientButton";
 import { RiArrowRightUpLine } from "react-icons/ri";
+import {  useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const footerRef = useRef(null);

@@ -6,7 +6,7 @@ import ourGoal2 from "../../assets/images/company/ourGoal2.webp";
 const OurGoal = () => {
   return (
     <>
-      <section className="relative z-10 pt-16 md:pt-24 px-6 md:px-24">
+      <section className="relative pt-16 md:pt-24 px-6 md:px-24">
         <div className="absolute inset-0 rounded-3xl"></div>{" "}
         {/* Dark overlay for contrast */}
         <div className="relative z-20 flex flex-col items-center space-y-6">

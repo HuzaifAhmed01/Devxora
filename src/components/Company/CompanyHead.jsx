@@ -1,11 +1,16 @@
 import React from 'react'
 import company1 from '../../assets/images/company/company1.jpg'
+import { motion } from "framer-motion";
 
 const CompanyHead = () => {
   return (
     <>
       <section className="relative z-10 pt-12 pr-4  md:pt-20 md:pr-4">
-        <div className="flex flex-col grid-cols-3 justify-center px-4 md:px-20">
+        <motion.div className="flex flex-col grid-cols-3 justify-center px-4 md:px-20"
+        initial={{opacity:0 , y: -20}}
+        animate={{opacity:2 , y: 0}}
+        transition={{duration:0.5, ease: "easeOut"}}
+        >
           <h1 className="text-5xl sm:text-4xl md:text-7xl lg:text-8xl font-extrabold leading-tight">
             <span className="block  text-white ">Creativity</span>
             <span className="mt-4 text-gray-300"> meets </span>
@@ -13,7 +18,7 @@ const CompanyHead = () => {
               technology
             </span>
           </h1>
-        </div>
+        </motion.div>
       </section>
 
       <section className="cb-screenshot py-10 md:py-20  ">
