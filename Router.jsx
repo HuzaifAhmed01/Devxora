@@ -1,9 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './src/pages/home/Home';
-import Navbar from './src/components/navbar/Navbar';
 import Footer from './src/components/Footer/Footer';
-import CompanyPage from './src/pages/company/CompanyPage';
+import Navbar from './src/components/Navbar/Navbar';
+import Projects from './src/pages/projects/Projects';
+import Contact from './src/pages/contact/Contact';
+import Privacy from './src/components/privacyPolicy/Privacy';
 
 const Router = () => {
   return (
@@ -11,7 +13,10 @@ const Router = () => {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/company" element={<CompanyPage />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="projects" element={<Projects/>}/>
+        <Route path='/privacy-policy' element={<Privacy/>}/>
+        <Route path="/let's-talk" element={<Contact/>}/>
       </Routes>
       <Footer/>
     </>
