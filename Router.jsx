@@ -13,7 +13,7 @@ import Contact from './src/pages/contact/Contact';
 const Router = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<Privacy/>}/>

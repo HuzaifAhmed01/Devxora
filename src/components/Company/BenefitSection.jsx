@@ -10,6 +10,7 @@ const BenefitSection = () => {
         className="cb-summary bg-white text-black py-10 sm:py-14 md:py-20"
         id="benefits"
       >
+        <div className="cb-summary-fill h-1 w-full bg-gray-200"></div>
 
         <div className="cb-summary-content container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="cb-summary-container max-w-4xl mx-auto">
