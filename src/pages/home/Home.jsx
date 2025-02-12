@@ -21,7 +21,6 @@ const Home = () => {
     <Philosophy/>
     <AgencyComponent/>
     <ProjectInquiry/>
-    <Marquee text={'Flawless Dev, Smooth UX '} speed={15}/>
 
       
     </>

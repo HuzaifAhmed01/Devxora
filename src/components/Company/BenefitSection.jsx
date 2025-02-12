@@ -1,6 +1,5 @@
 import React from 'react'
 import { Benefits } from '../../constants/index';
-import { GiNestedHexagons } from "react-icons/gi";
 import './BenifitsSection.css'
 const BenefitSection = () => {
 

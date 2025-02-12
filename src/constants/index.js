@@ -151,3 +151,9 @@ export let Benefits = [
       "From logo creation and UI/UX design to full-scale development, technical support, and marketing—we deliver end-to-end solutions tailored to your business needs.",
   },
 ];
+
+export const footerLinks = [
+  { text: `© ${new Date().getFullYear()} DevXora. All Rights Reserved.`, className: "text-[15px] border-1" },
+  { text: "Privacy Policy", className: "text-[15px] border-1", route: "privacy-policy" },
+  { text: "contact@devxora.com", className: "text-[15px] border-1", isEmail: true },
+];

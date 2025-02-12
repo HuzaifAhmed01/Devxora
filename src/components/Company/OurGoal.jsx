@@ -1,6 +1,6 @@
 import React from 'react'
-import ourGoal1 from '../../assets/images/company/ourGoal1.webp'
-import ourGoal2 from "../../assets/images/company/ourGoal2.webp";
+import ourGoal2 from '../../assets/images/company/Goals1.webp'
+import ourGoal1 from "../../assets/images/company/Goals2.webp";
 
 
 const OurGoal = () => {

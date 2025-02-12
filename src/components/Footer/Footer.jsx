@@ -1,17 +1,18 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { FooterActions } from "../../constants";
+import { FooterActions, footerLinks } from "../../constants";
 import GradientButton from "../gradientButton/GradientButton";
 import { RiArrowRightUpLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const footerRef = useRef(null);
   const navigate = useNavigate();
 
   const handleClick = (title) => {
-      navigate(`/${title}`);
-      setMenuOpen(false); // Close menu on navigation
-    };
+    navigate(`/${title}`);
+    setMenuOpen(false); // Close menu on navigation
+  };
 
   return (
     <motion.footer
@@ -50,7 +51,10 @@ const Footer = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h3 className="text-5xl font-bold uppercase">Have an Idea?</h3>
-        <GradientButton text={"tell us"} clasess={"px-8 py-3 text-[30px] border-1"} />
+        <GradientButton
+          text={"tell us"}
+          clasess={"px-8 py-3 text-[30px] border-1"}
+        />
       </motion.div>
 
       {/* Main Footer Heading (Big "DevXora" Text) */}
@@ -74,9 +78,24 @@ const Footer = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <GradientButton text={`© ${new Date().getFullYear()} DevXora. All Rights Reserved.`} clasess={"text-[15px] border-1"} />
-        <GradientButton text={`PrivacyPolicy`} clasess={"text-[15px] border-1"} />
-        <GradientButton text={`contact@devxora.com`} clasess={"text-[15px] border-1"} />
+        {/* <GradientButton text={`© ${new Date().getFullYear()} DevXora. All Rights Reserved.`} clasess={"text-[15px] border-1"} />
+        <GradientButton  text={`PrivacyPolicy`} clasess={"text-[15px] border-1"}  />
+        <GradientButton text={`contact@devxora.com`} clasess={"text-[15px] border-1"} /> */}
+
+        {footerLinks.map((item, index) => (
+          <span
+            key={index}
+            onClick={() => {
+              if (item.route === "privacy-policy") {
+                window.scrollTo({ top: 0 });
+                handleClick(item.route);
+              }
+            }}
+            className="cursor-pointer"
+          >
+            <GradientButton text={item.text} clasess={item.className} />
+          </span>
+        ))}
       </motion.div>
     </motion.footer>
   );

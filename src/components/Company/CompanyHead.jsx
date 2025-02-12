@@ -1,36 +1,52 @@
-import React from 'react'
-import company1 from '../../assets/images/company/company1.jpg'
+import React from "react";
+import { motion } from "framer-motion";
+import company1 from "../../assets/images/company/company-web.webp";
 
 const CompanyHead = () => {
   return (
     <>
-      <section className="relative z-10 pt-12 pr-4  md:pt-20 md:pr-4">
-        <div className="flex flex-col grid-cols-3 justify-center px-4 md:px-20">
-          <h1 className="text-5xl sm:text-4xl md:text-7xl lg:text-8xl font-extrabold leading-tight">
-            <span className="block  text-white ">Creativity</span>
-            <span className="mt-4 text-gray-300"> meets </span>
-            <span className="  text-white ">
-              technology
-            </span>
-          </h1>
-        </div>
+      {/* Hero Section */}
+      <section className="relative z-10 pt-12 lg:mb-10 md:pt-24 px-6 md:px-20 text-center md:text-left">
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight"
+        >
+          <span className="block text-white">Creativity</span>
+          <span className="mt-4 block text-gray-400">meets</span>
+          <span className="block text-white">Technology</span>
+        </motion.h1>
       </section>
 
-      <section className="cb-screenshot py-10 md:py-20  ">
-        <div className="cb-screenshot-preview mx-auto shadow-lg rounded-lg overflow-hidden">
-          <div className="cb-screenshot-preview-media transform transition-transform duration-500 hover:scale-105">
-            <picture>
-              <img
-                src={company1}
-                alt="Company Screenshot"
-                className="w-full h-96 object-cover"
-              />
-            </picture>
-          </div>
+      {/* Image Showcase */}
+      <section className="relative w-full px-2 lg:px-14 py-16 md:py-28 bg-[#0d0d0d]">
+        {/* Background Glow Effect */}
+        <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+          <div className="w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] bg-[#ffffff20] blur-[150px] opacity-20"></div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl shadow-2xl"
+        >
+          {/* Image Wrapper with Dynamic Hover Effect */}
+          <div className="group relative overflow-hidden rounded-3xl">
+            <motion.img
+              src={company1}
+              alt="Company Screenshot"
+              className="w-full h-[90vh] object-cover rounded-3xl transition-transform duration-700"
+            />
+
+            {/* Overlay Effect */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000000a0] via-transparent to-[#000000] opacity-100"></div>
+          </div>
+        </motion.div>
       </section>
     </>
   );
-}
+};
 
 export default CompanyHead;
