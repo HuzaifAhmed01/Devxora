@@ -31,7 +31,7 @@ const Footer = () => {
           <motion.a
             key={item.id}
             href={item.action}
-            className="flex items-center justify-between w-full py-6 px-12 border-b-[1px] text-3xl font-bold uppercase transition duration-300"
+            className="flex items-center justify-between w-full py-6 px-[10px] lg:px-12 border-b-[1px] text-3xl font-bold uppercase transition duration-300"
             whileHover={{ scale: 1.05 }}
           >
             {item.name}
@@ -76,7 +76,7 @@ const Footer = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <h2 className="text-7xl lg:text-9xl font-extrabold uppercase tracking-wider">
+        <h2 className="text-7xl lg:text-9xl  font-extrabold uppercase track lg:tracking-wider">
           DevXora
         </h2>
       </motion.div>

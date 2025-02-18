@@ -9,6 +9,7 @@ let videoRef = useRef(null);
 
 useGSAP(()=>{
   gsap.from(videoRef.current,{
+    opacity:0,
     scale:0,
     duration:1.5,
 
