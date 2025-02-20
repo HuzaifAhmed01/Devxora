@@ -5,7 +5,7 @@ import CompanyPage from './pages/company/CompanyPage';
 import Contact from './components/Contact/ContactUs';
 import Projects from './pages/projects/Projects'; // ✅ Added missing import
 import Marquee from './components/maquee/Marquee';
-import Navbar from './components/Navbar/Navbar'; // ✅ Fixed case sensitivity
+import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import PrivacyPolicy from './components/privacyPolicy/Privacy';
 
