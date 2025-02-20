@@ -6,7 +6,6 @@ import {
   tekiskyMart,
   
 } from "../assets/images";
-import svg1 from '../assets/images/company/svg1.svg'
 import { GiNestedHexagons } from "react-icons/gi";
 import { AiOutlineSlack } from "react-icons/ai";
 import { ImInfinite } from "react-icons/im";

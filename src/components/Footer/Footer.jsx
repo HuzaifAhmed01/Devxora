@@ -11,7 +11,6 @@ const Footer = () => {
 
   const handleClick = (title) => {
     navigate(`/${title}`);
-    setMenuOpen(false); // Close menu on navigation
   };
 
   return (
