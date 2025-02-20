@@ -6,7 +6,6 @@ import FeaturedProjects from '../../components/freaturedProjects/FeaturedProject
 import Philosophy from '../../components/Philosophy/Philosophy'
 import AgencyComponent from '../../components/AgencyComponent/AgencyComponent'
 import ProjectInquiry from '../../components/projectInquiry/ProjectInquiry'
-import Marquee from '../../components/maquee/Marquee'
 
 
 
