@@ -21,7 +21,7 @@ const Router = () => {
         <Route path="/let's-talk" element={<Contact />} /> 
       </Routes>
       <Marquee text={'Flawless Dev, Smooth UX'} speed={15} />
-      <Footer />
+      <Footer />   
     </>
   );
 };
