@@ -38,24 +38,28 @@ export let projects = [
     id: 0,
     image: gearxpert,
     name: "GearXpert - All auto parts in one Place",
+    link: "https://speedlineautoparts.netlify.app/",
     country: "Uk",
   },
   {
     id: 1,
     image: tekiskyMart,
     name: "TekiskyMart- web app for Ecommerce Business ",
+    link:"https://tekiskymart.com/",
     country: "India",
   },
   {
     id: 2,
     image: asmak,
     name: "Asmak - Asmak International LLC",
+    link:"https://asmakmct.com/",
     country: "Oman",
   },
   {
     id: 3,
     image: tekisky,
     name: "Tekisky - Official Website Of Tekisky Mart",
+    link:"https://tekisky.com/",
     country: "India",
   },
   {
