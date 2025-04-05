@@ -64,6 +64,7 @@ const MasonryGrid = () => {
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   viewport={{ once: true }}
+                  loading="lazy"
                   className="w-full h-full object-fill"
                   src={item.image}
                   alt={item.name}

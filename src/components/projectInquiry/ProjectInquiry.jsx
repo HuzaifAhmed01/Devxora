@@ -27,6 +27,7 @@ const handleClick = (title) => {
       <motion.img
         src={InquiryBg}
         alt="Project Inquiry Background"
+        loading="lazy"
         initial={{ opacity: 0, scale: 1.1 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -35,7 +36,7 @@ const handleClick = (title) => {
       />
 
       {/* Dark Overlay for Better Readability */}
-      <div className="absolute inset-0 bg-[#111] lg:bg-[#111]/80"></div>
+      <div className="absolute inset-0 bg-[#111] lg:bg-[#111]/90"></div>
 
       {/* Content Section */}
       <div className="relative z-10 w-full lg:w-1/2 text-left text-white">

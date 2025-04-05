@@ -18,7 +18,7 @@ useGSAP(()=>{
 
   return (
     <section className="w-full  lg:h-screen p-2 lg:px-15">
-      <div ref={videoRef}  className=" w-full  lg:h-[100vh] overflow-hidden  rounded-3xl ">
+      <div  ref={videoRef}  className=" w-full  lg:h-[100vh] overflow-hidden  rounded-3xl ">
         <video src={HomeReel} autoPlay loop muted className="w-full h-full object-cover back relative"></video>
       </div>
     </section>
